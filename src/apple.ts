@@ -1,5 +1,4 @@
 import { RepairPrice } from "../types.js";
-import { exportToExcel } from "./excel.js";
 
 const repairPageUrl = "https://support.apple.com/sv-se/iphone/repair?services=service";
 
@@ -68,13 +67,4 @@ function parseRepairPrices(data: any): RepairPrice[] {
     return result;
 }
 
-async function main() {
-    const productId = await getProductId();
-    const data = await getRepairPrices(productId);
-
-    const prices = parseRepairPrices(data);
-
-    await exportToExcel(prices);
-}
-
-main()
+export { getProductId, getRepairPrices, parseRepairPrices };

@@ -13,7 +13,8 @@
   "devDependencies": {
     "@types/node": "^26.6.2",
     "tsx": "^4.23.15",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vercel": "^60.0.1"
   },
   "dependencies": {
     "exceljs": "^4.4.0"
